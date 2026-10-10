@@ -1,4 +1,5 @@
 import { Link, Navigate } from 'react-router-dom';
+import { DEMO } from '../api.js';
 import { useAuth } from '../auth.jsx';
 import Flower from '../components/Flower.jsx';
 
@@ -12,6 +13,7 @@ export default function Welcome() {
       <p>Tasks and notes in one calm place.</p>
       <Link className="btn btn-light" to="/signup">Get started</Link>
       <Link className="link-light" to="/login">I already have an account</Link>
+      {DEMO && <p style={{ fontSize: 13, textAlign: 'center', margin: 0 }}>Demo version: your tasks are saved only in this browser.</p>}
     </main>
   );
 }

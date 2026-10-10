@@ -1,3 +1,8 @@
+import { demoApi } from './demoApi.js';
+
+// True when the site was built as the GitHub Pages demo (no server, data kept in the browser).
+export const DEMO = import.meta.env.VITE_DEMO === 'true';
+
 // Thin wrapper around fetch: adds the login token and turns server errors into Error objects.
 const TOKEN_KEY = 'petal_token';
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
@@ -5,6 +10,7 @@ export const setToken = (t) => (t ? localStorage.setItem(TOKEN_KEY, t) : localSt
 
 export async function api(path, { method = 'GET', body } = {}) {
   const token = getToken();
+  if (DEMO) return demoApi(path, { method, body }, token);
   let res;
   try {
     res = await fetch('/api' + path, {
