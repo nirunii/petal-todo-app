@@ -5,11 +5,11 @@
 **Live demo:** https://YOUR-USERNAME.github.io/petal-todo-app/ *(runs in your browser; data is saved only on your device)*
 
 <p align="center">
-    docs/screenshots/welcome.png
-   docs/screenshots/today.png
-   docs/screenshots/upcoming.png
-   docs/screenshots/notes.png
-   docs/screenshots/task.png
+  <img src="screenshots/welcome.png" width="19%" alt="Welcome screen" />
+  <img src="screenshots/today.png" width="19%" alt="Today screen" />
+  <img src="screenshots/upcoming.png" width="19%" alt="Upcoming screen" />
+  <img src="screenshots/notes.png" width="19%" alt="Notes screen" />
+  <img src="screenshots/task.png" width="19%" alt="Task details screen" />
 </p>
 
 ## Features
